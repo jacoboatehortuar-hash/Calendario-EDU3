@@ -1,0 +1,47 @@
+.estadisticas{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    text-align:center;
+}
+
+.estadisticas h2{
+    font-size:32px;
+    margin-bottom:30px;
+    color:#1f2937;
+}
+
+.contenedor-estadisticas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card i{
+    font-size:45px;
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:38px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#6b7280;
+    font-size:18px;
+}

@@ -1,0 +1,565 @@
+:root{
+    --primario:#2563EB;
+    --secundario:#22C55E;
+    --amarillo:#FACC15;
+    --neutro:#F3F4F6;
+    --texto:#1F2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--neutro);
+    color:var(--texto);
+}
+
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+========================= */
+
+.navbar{
+    height:80px;
+    width:100%;
+
+    background:var(--primario);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 50px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:bold;
+}
+
+
+/* Buscador */
+
+.buscador{
+    display:flex;
+    width:400px;
+}
+
+.buscador input{
+    width:100%;
+    padding:12px 18px;
+
+    border:none;
+    outline:none;
+
+    border-radius:25px 0 0 25px;
+
+    font-size:15px;
+}
+
+.buscador button{
+    width:55px;
+
+    border:none;
+    background:var(--amarillo);
+
+    border-radius:0 25px 25px 0;
+
+    cursor:pointer;
+    font-size:18px;
+}
+
+.usuario{
+    color:white;
+    font-size:25px;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.principal{
+    width:90%;
+    max-width:1100px;
+
+    margin:40px auto;
+}
+
+
+/* =========================
+   ENCABEZADO CALENDARIO
+========================= */
+
+.encabezado{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:25px;
+}
+
+.encabezado h1{
+    color:var(--texto);
+    font-size:30px;
+}
+
+.flecha{
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primario);
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.flecha:hover{
+    background:var(--secundario);
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   CALENDARIO
+========================= */
+
+.calendario{
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+
+/* Días de la semana */
+
+.dias-semana{
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:10px;
+
+    margin-bottom:10px;
+}
+
+.dias-semana div{
+    text-align:center;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:var(--primario);
+
+    padding:13px;
+
+    border-radius:8px;
+}
+
+
+/* Días */
+
+.dias{
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:10px;
+}
+
+.dia{
+    min-height:90px;
+
+    background:var(--neutro);
+
+    border-radius:10px;
+
+    padding:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:2px solid transparent;
+}
+
+.dia:hover{
+    border-color:var(--primario);
+
+    transform:translateY(-3px);
+}
+
+.dia.hoy{
+    background:var(--amarillo);
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   EVENTOS
+========================= */
+
+.evento-calendario{
+    background:var(--primario);
+
+    color:white;
+
+    padding:5px;
+
+    margin-top:8px;
+
+    border-radius:5px;
+
+    font-size:12px;
+}
+
+.tarea-calendario{
+    background:var(--amarillo);
+
+    color:var(--texto);
+
+    padding:5px;
+
+    margin-top:5px;
+
+    border-radius:5px;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   LEYENDA
+========================= */
+
+.leyenda{
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    margin:25px 0;
+
+    flex-wrap:wrap;
+}
+
+.leyenda div{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.color{
+    width:15px;
+    height:15px;
+
+    border-radius:50%;
+}
+
+.evento{
+    background:var(--primario);
+}
+
+.tarea{
+    background:var(--amarillo);
+}
+
+.completado{
+    background:var(--secundario);
+}
+
+
+/* =========================
+   BOTÓN AGREGAR
+========================= */
+
+.boton-agregar{
+    display:flex;
+
+    justify-content:center;
+
+    margin:30px 0;
+}
+
+.boton-agregar button{
+    background:var(--secundario);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.boton-agregar button:hover{
+    background:#16A34A;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   TRABAJOS PENDIENTES
+========================= */
+
+.pendientes{
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    margin-bottom:50px;
+}
+
+.pendientes h2{
+    text-align:center;
+
+    color:var(--primario);
+
+    margin-bottom:25px;
+}
+
+#listaTareas{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.tarea-card{
+    background:var(--neutro);
+
+    border-left:7px solid var(--amarillo);
+
+    padding:18px;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.tarea-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.tarea-card h3{
+    color:var(--primario);
+
+    margin-bottom:8px;
+}
+
+.tarea-card p{
+    margin:5px 0;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(31,41,55,.65);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:2000;
+}
+
+.modal-contenido{
+    width:450px;
+
+    background:var(--neutro);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+    animation:aparecer .3s ease;
+}
+
+.modal-contenido h2{
+    text-align:center;
+
+    color:var(--primario);
+
+    margin-bottom:20px;
+}
+
+.modal-contenido label{
+    display:block;
+
+    margin:12px 0 6px;
+
+    font-weight:bold;
+}
+
+.modal-contenido input,
+.modal-contenido textarea{
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #D1D5DB;
+
+    border-radius:9px;
+
+    outline:none;
+}
+
+.modal-contenido input:focus,
+.modal-contenido textarea:focus{
+    border-color:var(--primario);
+}
+
+.modal-contenido textarea{
+    resize:vertical;
+
+    min-height:90px;
+}
+
+.cerrar{
+    float:right;
+
+    border:none;
+
+    background:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:var(--texto);
+}
+
+.cerrar:hover{
+    color:var(--primario);
+}
+
+.guardar{
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    background:var(--secundario);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.guardar:hover{
+    background:#16A34A;
+}
+
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        padding:15px;
+        height:auto;
+
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .buscador{
+        width:90%;
+    }
+
+    .principal{
+        margin-top:160px;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .dias{
+        gap:5px;
+    }
+
+    .dia{
+        min-height:65px;
+        font-size:12px;
+    }
+
+}
